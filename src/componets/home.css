@@ -29,11 +29,11 @@ html, body {
 
 .text-overlay {
   position: absolute; 
-  top: 40%; 
-  left: 75%; 
-  transform: translate(-50%, -50%); 
+  top: 25%; /* Center vertically */
+  left: 60%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust positioning to center */
   color: white; 
-  font-size: 3rem; 
+  font-size: 3vw; /* Responsive font size based on viewport width */
   text-align: center; 
 }
 .black{
