@@ -89,11 +89,21 @@ html, body {
 .white{
   border-top: solid 1px grey;
 }
-.left-half > p{
-  font-size: 5rem;
+.left-half {
+  position: relative; /* Make sure this is relative to enable absolute positioning of child elements */
+  background-color: black;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+.left-half > p {
+  font-size: 5vw; /* Responsive font size based on viewport width */
   color: white;
   position: absolute;
-  left: 25%;
-  transform: translateY(35rem);
-  
+  top: 50%; /* Center vertically */
+  left: 100%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the text */
+  text-align: center; /* Ensure text is centered */
+  margin: 0; /* Remove default margin */
 }
