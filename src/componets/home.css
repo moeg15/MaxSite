@@ -1,0 +1,99 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+#myVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.acting {
+  display: flex; 
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden; 
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute; 
+  top: 40%; 
+  left: 75%; 
+  transform: translate(-50%, -50%); 
+  color: white; 
+  font-size: 3rem; 
+  text-align: center; 
+}
+.black{
+  background-color: black;
+  display: flex;
+
+}
+/* Ensure the container3D takes up half the width of its parent */
+.container3D {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  background-color: #000; /* Optional: set a background color */
+}
+
+.left-half {
+  width: 100%;
+  height: 100vh; /* Adjust based on your needs */
+  background-color: black; /* Ensures visibility if there's no content */
+}
+
+.right-half {
+  width: 100%;
+  height: 100vh; /* Adjust based on your needs */
+  background-color: black; /* For visual separation */
+  color: white;
+  text-align: center;
+  align-content: center;
+  
+}
+.right-half > p {
+
+  padding: 5%;
+}
+ h1{
+  color: white;
+}
+.right-half.hidden {
+  opacity: 0;
+  transition: opacity 5s ease;
+}
+
+.right-half.visible {
+  opacity: 1;
+  transition: opacity 5s ease;
+}
+
+.headshot{
+  width: 100%;
+  height: 100%;
+  border: 1px solid grey;
+}
+.white{
+  border-top: solid 1px grey;
+}
+.left-half > p{
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  left: 25%;
+  transform: translateY(35rem);
+  
+}

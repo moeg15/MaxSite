@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Height of the cut */
+  --cut: 100px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+section {
+  background-color: #404040;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Ensure it takes up full width */
+}
+
+.tilt {
+  background: linear-gradient(to right, black, grey);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--cut)));
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%; /* Ensure it takes up full width */
+}
+
+.left-content {
+  flex: 1; /* Grow to fill available space */
+  max-width: 30%; /* Restrict to half of the parent */
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.left-content h1 {
+  font-size: 2rem;
+  color: #404040;
+  background-color: whitesmoke;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.right-content {
+  flex: 1; /* Grow to fill available space */
+  max-width: 70%; /* Restrict to half of the parent */
+  padding: 1rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+
+.right-content .xp {
+  background-color: whitesmoke;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}

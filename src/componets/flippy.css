@@ -1,0 +1,142 @@
+.card-component {
+  display: flex;
+  justify-content: center; /* Center the card within the parent */
+  padding: 2rem;
+  width: 100%; /* Ensure the parent takes up full width */
+}
+
+.card-component .card {
+  width: 300px; /* Set a fixed width for the card, adjust as needed */
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem;
+}
+
+.card-component .card__side {
+  height: 52rem;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card-component .card__side--front-1 {
+
+  background-size: 100% ;
+}
+
+.card-component .card__side--back-1 {
+  background: linear-gradient(-45deg, black, white);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card-component .card:hover .card__side--front-1 {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card-component .card:hover .card__side--back-1 {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.card-component .card__title {
+  height: 20rem;
+  padding: 4rem 2rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-component .card__title--1 .fas {
+  font-size: 5rem;
+}
+
+.card-component .card__heading {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  width: 75%;
+}
+
+.card-component .card__details {
+  padding: 0 2rem 2rem;
+}
+
+.card-component .card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card-component .card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.card-component .card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.card-component .card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+.card-component .card__price-box {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 8rem;
+}
+
+.card-component .card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.card-component .card__price-value {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.card-component .row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.card-component .row [class^="col-"] {
+  float: left;
+}
+
+.card-component .row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
